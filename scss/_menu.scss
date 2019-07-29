@@ -67,7 +67,7 @@
     padding: 0;
     background: darken($color: $primary-color, $amount: 5);
     list-style: none;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(0, -100%, 0);
     @include easeOut;
 
     &.show {
@@ -79,7 +79,7 @@
   // Branding side
   &-branding {
     background: $primary-color;
-    transform: translate3d(0, 0, 100%);
+    transform: translate3d(0, 100%, 0);
     @include easeOut;
 
     &.show {
@@ -113,10 +113,10 @@
   .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 25px;
+    font-size: 20px;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 550;
+    font-weight: 300;
     color: #fff;
     text-decoration: none;
     @include easeOut;
@@ -130,6 +130,6 @@
 
 @for $x from 1 through 5 {
   .nav-item:nth-child(#{$x}) {
-    transition-delay: $x * 0.2s;
+    transition-delay: $x * 0.1s;
   }
 }
