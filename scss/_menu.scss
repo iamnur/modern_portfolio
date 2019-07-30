@@ -12,7 +12,7 @@
     width: 30px;
     height: 3.5px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -67,7 +67,7 @@
     padding: 0;
     background: darken($color: $primary-color, $amount: 5);
     list-style: none;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(100%, 0, 0);
     @include easeOut;
 
     &.show {
@@ -79,7 +79,7 @@
   // Branding side
   &-branding {
     background: $primary-color;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 0, 100%);
     @include easeOut;
 
     &.show {
@@ -117,7 +117,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
