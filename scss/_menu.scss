@@ -1,5 +1,4 @@
 // Menu Button
-
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -9,36 +8,37 @@
   @include easeOut;
 
   .btn-line {
-    width: 30px;
-    height: 3.5px;
+    width: 28px;
+    height: 3px;
     margin: 0 0 5px 0;
     background: set-text-color($primary-color);
     @include easeOut;
   }
 
-  // Rotate inti X with menu lines
+  // Rotate Into X With Menu Lines
   &.close {
     transform: rotate(180deg);
 
     .btn-line {
-      // Line 1 - rotate
+      // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
-      // Line 2 hide
+
+      // Line 2 - Hide
       &:nth-child(2) {
         opacity: 0;
       }
-      // Line3 rotate
+
+      // Line 3 - Rotate
       &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
+        transform: rotate(-45deg) translate(7px, -6px);
       }
     }
   }
 }
 
 // Menu Overlay
-
 .menu {
   position: fixed;
   top: 0;
@@ -65,32 +65,32 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($color: $primary-color, $amount: 5);
+    background: darken($primary-color, 5);
     list-style: none;
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(0, -100%, 0);
     @include easeOut;
 
     &.show {
-      // slide from the top(brad version or left in my case
+      // Slide in from top
       transform: translate3d(0, 0, 0);
     }
   }
 
-  // Branding side
+  // Branding Side
   &-branding {
     background: $primary-color;
-    transform: translate3d(0, 0, 100%);
+    transform: translate3d(0, 100%, 0);
     @include easeOut;
 
     &.show {
-      // slide from the top(brad version or left in my case
+      // Slide in from bottom
       transform: translate3d(0, 0, 0);
     }
+
     .portrait {
-      width: 388px;
-      height: 387px;
-      background: url("../img/portrait1.jpg");
-      // edit portrait image here
+      width: 250px;
+      height: 250px;
+      background: url('../img/portrait.jpg');
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
@@ -101,7 +101,7 @@
     @include easeOut;
 
     &.show {
-      // slide from the top(brad version or left in my case
+      // Slide in from right
       transform: translate3d(0, 0, 0);
     }
 
@@ -113,7 +113,7 @@
   .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 20px;
+    font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
@@ -126,9 +126,9 @@
     }
   }
 }
-// Delay each nav item slide by 0.1s
 
-@for $x from 1 through 5 {
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }
