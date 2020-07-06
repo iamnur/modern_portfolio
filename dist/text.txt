@@ -1,0 +1,4 @@
+//to check and update dependencies
+
+npm outdated 
+npm update
